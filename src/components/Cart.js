@@ -30,8 +30,8 @@ export default function Cart({items, onItemDeleted, onQuantityChanged}) {
                 </div>
                 <div className='list-content'>
                     {items.map(item => 
-                    <div key={item.name} className='list-row'>
-                            <span className='product'>{item.name}</span>
+                    <div key={item.id} className='list-row'>
+                            <span className='product'>{item.title}</span>
                             <span className='price'>${item.price}</span>
                             <span className='quantity'>
                                 <input value={item.quantity} onChange={(e) => onQuantityChanged(item, +e.target.value || 0)}/>

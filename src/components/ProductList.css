@@ -1,0 +1,14 @@
+.pl-product {
+    display: inline-block;
+    width: 50%;
+}
+
+.pl-price {
+    display: inline-block;
+    width: 25%;
+}
+
+.pl-add {
+    display: inline-block;
+    width: 25%;
+}

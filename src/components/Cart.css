@@ -1,0 +1,41 @@
+.product {
+    width: 50%;
+    display: inline-block;
+}
+
+.price {
+    width: 20%;
+    display: inline-block;
+}
+
+.quantity {
+    width: 20%;
+    display: inline-block;
+}
+
+.delete {
+    width: 10%;
+    display: inline-block;
+}
+
+.delete button {
+    color: brown;
+    border: none;
+}
+
+.quantity input {
+    width: 52px;
+}
+
+.totals {
+    margin-top: 50px;
+}
+
+.total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.discount input, .discount button {
+    margin-left: 10px;
+}

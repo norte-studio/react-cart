@@ -1,6 +1,6 @@
 .pl-product {
     display: inline-block;
-    width: 50%;
+    width: 60%;
 }
 
 .pl-price {
@@ -10,7 +10,7 @@
 
 .pl-add {
     display: inline-block;
-    width: 25%;
+    width: 15%;
 }
 
 .pl-product, .pl-price, .pl-add {

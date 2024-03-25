@@ -47,10 +47,14 @@
     color: #2c9430;
 }
 
+.btn.apply-discount-btn:hover {
+    color: white;
+}
+
 .discount-status {
     margin-top: 10px;
 }
 
 .cart .list-row-separator {
-    width: 82%;
+    width: 85%;
 }

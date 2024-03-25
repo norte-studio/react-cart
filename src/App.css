@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+}
+
 .App {
   display: flex;
 }
@@ -23,6 +27,32 @@
 
 .list-row {
   margin-top: 5px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-size: inherit;
+  color: black;
+  background-color: #d3e1eb;
+}
+
+input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+input:focus {
+  border: none;
+  outline: 1px solid #009688;
+}
+
+.list-row-separator {
+  border-top: 1px solid #f4f4f4;
+  width: 87%;
+  margin: 4px 0;
 }
 
 @media only screen and (max-width: 600px) {

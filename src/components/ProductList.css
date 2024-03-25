@@ -12,3 +12,10 @@
     display: inline-block;
     width: 25%;
 }
+
+.pl-product, .pl-price, .pl-add {
+    vertical-align: middle;
+}
+
+
+

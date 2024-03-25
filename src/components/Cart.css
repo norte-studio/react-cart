@@ -1,16 +1,17 @@
+.product, .price, .quantity {
+    display: inline-block;
+    vertical-align: middle;
+}
 .product {
     width: 50%;
-    display: inline-block;
 }
 
 .price {
     width: 20%;
-    display: inline-block;
 }
 
 .quantity {
     width: 20%;
-    display: inline-block;
 }
 
 .delete {
@@ -19,8 +20,10 @@
 }
 
 .delete button {
-    color: brown;
+    color: red;
     border: none;
+    background: none;
+    font-size: inherit;
 }
 
 .quantity input {
@@ -38,4 +41,16 @@
 
 .discount input, .discount button {
     margin-left: 10px;
+}
+
+.btn.apply-discount-btn {
+    color: #2c9430;
+}
+
+.discount-status {
+    margin-top: 10px;
+}
+
+.cart .list-row-separator {
+    width: 82%;
 }

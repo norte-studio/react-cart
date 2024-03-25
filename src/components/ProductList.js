@@ -24,13 +24,16 @@ export default function ProductList({onProductAdded}) {
         </div>
         <div className='list-content'>
           {products.map(product => 
-            <div key={product.id} className='list-row'>
-              <div className='pl-product'>{product.title}</div>
-              <div className='pl-price'>{product.price}</div>
-              <div className='pl-add'>
-                <button onClick={() => onProductAdded(product)}>Add</button>
+            <>
+              <div key={product.id} className='list-row'>
+                <div className='pl-product'>{product.title}</div>
+                <div className='pl-price'>${product.price}</div>
+                <div className='pl-add'>
+                  <button className='btn' onClick={() => onProductAdded(product)}>Add</button>
+                </div>
               </div>
-            </div>
+              <div className='list-row-separator'></div>
+            </>
           )}
         </div>
        </div>

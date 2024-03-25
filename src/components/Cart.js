@@ -19,7 +19,7 @@ export default function Cart({items, onItemDeleted, onQuantityChanged}) {
   };
 
   return (
-    <div>
+    <div className='cart'>
         <div className='section-title'>Cart</div>
         <div className='section-body'>
             <div>
@@ -30,25 +30,28 @@ export default function Cart({items, onItemDeleted, onQuantityChanged}) {
                 </div>
                 <div className='list-content'>
                     {items.map(item => 
-                    <div key={item.id} className='list-row'>
+                    <>
+                        <div key={item.id} className='list-row'>
                             <span className='product'>{item.title}</span>
                             <span className='price'>${item.price}</span>
                             <span className='quantity'>
                                 <input value={item.quantity} onChange={(e) => onQuantityChanged(item, +e.target.value || 0)}/>
                             </span>
                             <span className='delete'><button onClick={() => onItemDeleted(item)}>x</button></span>
-                    </div>)}
+                        </div>
+                        <div className='list-row-separator'></div>
+                    </>)}
                 </div>
             </div>
             <div className='totals'>
                 <div className='discount'>
                     Discount Code 
                     <input value={discountCode} onChange={(e) => setDiscountCode(e.target.value)} type='text'/>
-                    <button onClick={applyDiscount}>Apply</button>
+                    <button className='btn apply-discount-btn' onClick={applyDiscount}>Apply</button>
                 </div> 
-                {isDiscountValid && <div style={{color : 'green'}}>-${discount}% applied</div>}
-                {isDiscountValid === false && <div style={{color : 'red'}}>Discount code is invalid</div>}
-                <div className='total'>Total : {total - total * discount/100}</div>
+                {isDiscountValid && <div className='discount-status' style={{color : 'green'}}>-${discount}% applied</div>}
+                {isDiscountValid === false && <div className='discount-status' style={{color : 'red'}}>Discount code is invalid</div>}
+                <div className='total'>Total : {(total - total * discount/100).toFixed(2)}</div>
             </div>
         </div>
         
